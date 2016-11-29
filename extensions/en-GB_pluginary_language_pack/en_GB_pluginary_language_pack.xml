@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="file" method="upgrade">
+  <name>en_GB_pluginary_language_pack</name>
+  <version>2016-11-29 22:08</version>
+  <creationDate>2016-11-29 22:08</creationDate>
+  <author>AryGroup</author>
+  <email>arygroup@gmail.com</email>
+  <authorUrl>http://arygroup.ga</authorUrl>
+  <copyright>Copyright (C) 2004-2016 Gruz. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>en-GB PluginAry language pack</description>
+  <scriptfile>scriptfile.php</scriptfile>
+  <fileset>
+    <files target="plugins/system/pluginary/language/en-GB" folder="plugins/system/pluginary/language/en-GB">
+      <file>en-GB.plg_system_pluginary.ini</file>
+      <file>en-GB.plg_system_pluginary.sys.ini</file>
+    </files>
+  </fileset>
+  <updateservers>
+    <server type="extension" priority="1" name="en_GB_pluginary_language_pack">http://gruz.org.ua/images/stories/files/pluginary/update_en-GB.xml</server>
+  </updateservers>
+</extension>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_PLUGINARY</name>
+	<author>Gruz</author>
+	<creationDate>2016-11-29</creationDate>
+	<copyright>Copyright (C) 2004-2016 Gruz All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>arygroup@gmail.com</authorEmail>
+	<authorUrl>http://gruz.org.ua/extensions/pluginary.html</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_PLUGINARY_XML_DESCRIPTION</description>
+	<files>
+		
+		
+	<folder>extensions</folder><folder>helpers</folder><folder>images</folder><folder>language</folder><filename>README.md</filename><filename>index.html</filename><filename plugin="pluginary">pluginary.php</filename><filename>scriptary.php</filename></files>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/gjfields">
+			<fieldset name="basic">
+				<field name="@version" type="nn_version" extension="notificationary" xml="/plugins/system/pluginary/pluginary.xml"/>
+				<field name="runinbackend" maxrepeatlength="1" type="variablefield" basetype="list" default="0" label="PLG_SYSTEM_PLUGINARY_RUN_IN_BACKEND" description="">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="debug" maxrepeatlength="1" type="variablefield" basetype="list" default="0" label="PLG_SYSTEM_PLUGINARY_DEBUG" description="PLG_SYSTEM_PLUGINARY_DEBUG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="{rulesgroup" length="" maxrepeatlength="" type="variablefield" default="PLG_SYSTEM_PLUGINARY_RULESGROUP" label="PLG_SYSTEM_PLUGINARY_RULESGROUP" basetype="group"/>
+					<field name="isenabled" maxrepeatlength="1" type="variablefield" basetype="list" default="1" label="JENABLED" description="">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field name="methodtorun" maxrepeatlength="1" type="variablefield" basetype="list" default="0" label="PLG_SYSTEM_PLUGINARY_METHOD_TO_RUN" description="PLG_SYSTEM_PLUGINARY_METHOD_TO_RUN_DESC">
+						 <option value="hardcoded">Hardcoded</option>
+						 <option value="custom">Custom</option>
+					</field>
+
+					<field name="{methodtorun_hardcoded" maxrepeatlength="1" type="variablefield" basetype="toggler" param="methodtorun" value="hardcoded"/>
+						<field name="methodtorun_hardcoded" maxrepeatlength="1" type="variablefield" basetype="groupedlist" default="0" label="" description="">
+							<group label="Authentication">
+								 <option value="onUserAuthenticate">onUserAuthenticate</option>
+							</group>
+							<group label="Captcha">
+								 <option value="onInit">onInit</option>
+								 <option value="onDisplay">onDisplay</option>
+								 <option value="onCheckAnswer">onCheckAnswer</option>
+							</group>
+							<group label="Content">
+								 <option value="onContentPrepare">onContentPrepare</option>
+								 <option value="onContentAfterTitle">onContentAfterTitle</option>
+								 <option value="onContentBeforeDisplay">onContentBeforeDisplay</option>
+								 <option value="onContentAfterDisplay">onContentAfterDisplay</option>
+								 <option value="onContentBeforeSave">onContentBeforeSave</option>
+								 <option value="onContentAfterSave">onContentAfterSave</option>
+								 <option value="onContentPrepareForm">onContentPrepareForm</option>
+								 <option value="onContentPrepareData">onContentPrepareData</option>
+								 <option value="onContentBeforeDelete">onContentBeforeDelete</option>
+								 <option value="onContentAfterDelete">onContentAfterDelete</option>
+								 <option value="onContentChangeState">onContentChangeState</option>
+								 <option value="onContentSearch">onContentSearch</option>
+								 <option value="onContentSearchAreas">onContentSearchAreas</option>
+							</group>
+							<group label="Editors">
+								 <option value="onInit">onInit</option>
+								 <option value="onSave">onSave</option>
+								 <option value="onSetContent">onSetContent</option>
+								 <option value="onDisplay">onDisplay</option>
+								 <option value="onGetContent">onGetContent</option>
+								 <option value="onGetInsertMethod">onGetInsertMethod</option>
+							</group>
+							<group label="Extensions">
+								 <option value="onExtensionAfterInstall">onExtensionAfterInstall</option>
+								 <option value="onExtensionAfterUninstall">onExtensionAfterUninstall</option>
+								 <option value="onExtensionAfterUpdate">onExtensionAfterUpdate</option>
+								 <option value="onExtensionBeforeSave">onExtensionBeforeSave</option>
+								 <option value="onExtensionAfterSave">onExtensionAfterSave</option>
+							</group>
+							<group label="Finder">
+								 <option value="onFinderCategoryChangeState">onFinderCategoryChangeState</option>
+								 <option value="onFinderChangeState">onFinderChangeState</option>
+								 <option value="onFinderAfterDelete">onFinderAfterDelete</option>
+								 <option value="onFinderAfterDelete">onFinderAfterDelete</option>
+								 <option value="onFinderBeforeSave">onFinderBeforeSave</option>
+								 <option value="onFinderAfterSave">onFinderAfterSave</option>
+							</group>
+							<group label="Quick Icons">
+								 <option value="onGetIcons">onGetIcons</option>
+							</group>
+							<group label="System">
+								 <option value="onAfterInitialise">onAfterInitialise</option>
+								 <option value="onAfterRoute">onAfterRoute</option>
+								 <option value="onAfterDispatch">onAfterDispatch</option>
+								 <option value="onAfterRender">onAfterRender</option>
+								 <option value="onBeforeRender">onBeforeRender</option>
+								 <option value="onBeforeCompileHead">onBeforeCompileHead</option>
+								 <option value="onSearch">onSearch</option>
+								 <option value="onSearchAreas">onSearchAreas</option>
+								 <option value="onGetWebServices">onGetWebServices</option>
+							</group>
+							<group label="User">
+								 <option value="onUserBeforeSave">onUserBeforeSave</option>
+								 <option value="onUserAfterSave">onUserAfterSave</option>
+								 <option value="onUserBeforeDelete">onUserBeforeDelete</option>
+								 <option value="onUserAfterDelete">onUserAfterDelete</option>
+								 <option value="onUserLogin">onUserLogin</option>
+								 <option value="onUserLoginFailure">onUserLoginFailure</option>
+								 <option value="onUserAfterLogin">onUserAfterLogin</option>
+								 <option value="onUserLogout">onUserLogout</option>
+								 <option value="onUserAuthenticate">onUserAuthenticate</option>
+								 <option value="onUserAuthorisation">onUserAuthorisation</option>
+								 <option value="onUserAuthorisationFailure">onUserAuthorisationFailure</option>
+								 <option value="onUserBeforeSaveGroup">onUserBeforeSaveGroup</option>
+								 <option value="onUserAfterSaveGroup">onUserAfterSaveGroup</option>
+								 <option value="onUserBeforeDeleteGroup">onUserBeforeDeleteGroup</option>
+								 <option value="onUserAfterDeleteGroup">onUserAfterDeleteGroup</option>
+							</group>
+							<group label="Contact Component">
+								 <option value="onValidateContact">onValidateContact</option>
+								 <option value="onSubmitContact">onSubmitContact</option>
+							</group>
+							<group label="Installer Component">
+								 <option value="onInstallerBeforeInstallation">onInstallerBeforeInstallation</option>
+								 <option value="onInstallerBeforeInstaller">onInstallerBeforeInstaller</option>
+								 <option value="onInstallerAfterInstaller">onInstallerAfterInstaller</option>
+							</group>
+							<group label="Menu Component">
+								 <option value="onAfterGetMenuTypeOptions">onAfterGetMenuTypeOptions</option>
+							</group>
+
+						</field>
+					<field name="methodtorun_hardcoded}" maxrepeatlength="1" type="variablefield" basetype="toggler"/>
+
+					<field name="{methodtorun_custom" maxrepeatlength="1" type="variablefield" basetype="toggler" param="methodtorun" value="custom"/>
+						<field name="methodtorun_custom" maxrepeatlength="1" type="variablefield" basetype="text" default="" label="" description="" hint="onContentPrepare"/>
+					<field name="methodtorun_custom}" maxrepeatlength="1" type="variablefield" basetype="toggler"/>
+
+					<field maxrepeatlength="1" type="variablefield" basetype="textareafixed" name="code" label="PLG_SYSTEM_PLUGINARY_CODE" description="PLG_SYSTEM_PLUGINARY_CODE_DESC" rows="25" cols="100" class="span8"/>
+
+				<field name="rulesgroup}" type="variablefield" basetype="group"/>
+			</fieldset>
+		</fields>
+	</config>
+<updateservers><servers type="extension" priority="1" name="pluginary">http://gruz.org.ua/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=14&amp;dummy=extension.xml</servers></updateservers></extension>
