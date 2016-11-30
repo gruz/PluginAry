@@ -2,12 +2,12 @@
 <extension version="3.1" type="plugin" group="system" method="upgrade">
 	<name>PLG_SYSTEM_PLUGINARY</name>
 	<author>Gruz</author>
-	<creationDate>2016-11-29</creationDate>
+	<creationDate>2016-11-30</creationDate>
 	<copyright>Copyright (C) 2004-2016 Gruz All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>arygroup@gmail.com</authorEmail>
 	<authorUrl>http://gruz.org.ua/extensions/pluginary.html</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>PLG_SYSTEM_PLUGINARY_XML_DESCRIPTION</description>
 	<files>
 		

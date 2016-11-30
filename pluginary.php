@@ -158,7 +158,7 @@ dump ($arg_list,'$arg_list');
 	}
 
 	$app = JFactory::getApplication();
-	$path = JPATH_BASE . '/templates/' . $app->getTemplate() . '/html/plugin/';
+	$path = __DIR__ . '/methods/';
 
 	if (is_dir($path))
 	{
